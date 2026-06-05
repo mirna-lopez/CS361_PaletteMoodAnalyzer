@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import re
 
 app = Flask(__name__)
+CORS(app)
 
 # Mood mapping based on color brightness and hue characteristics
 MOOD_RULES = [
